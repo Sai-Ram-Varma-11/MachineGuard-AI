@@ -1,0 +1,204 @@
+{
+  "dataset": {
+    "non_failure": 9661,
+    "failure": 339,
+    "failure_percent": 3.39,
+    "rows": 10000,
+    "train_rows": 8000,
+    "test_rows": 2000
+  },
+  "random_state": 42,
+  "cv_folds": 5,
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "cv_f1": 0.23457038927750937,
+      "cv_recall": 0.8044444444444444,
+      "cv_precision": 0.1373675334508657,
+      "cv_roc_auc": 0.8965254522136423,
+      "accuracy": 0.8245,
+      "precision": 0.14177215189873418,
+      "recall": 0.8235294117647058,
+      "f1": 0.24190064794816415,
+      "roc_auc": 0.9069540859822189,
+      "pr_auc": 0.38176196610560775,
+      "specificity": 0.8245341614906833,
+      "false_positive_rate": 0.17546583850931677,
+      "confusion_matrix": [
+        [
+          1593,
+          339
+        ],
+        [
+          12,
+          56
+        ]
+      ],
+      "params": {}
+    },
+    {
+      "model": "Decision Tree",
+      "cv_f1": 0.448526163705932,
+      "cv_recall": 0.8600000000000001,
+      "cv_precision": 0.3038470759564021,
+      "cv_roc_auc": 0.8739676288712197,
+      "accuracy": 0.9295,
+      "precision": 0.31088082901554404,
+      "recall": 0.8823529411764706,
+      "f1": 0.45977011494252873,
+      "roc_auc": 0.9079474180976739,
+      "pr_auc": 0.5145577264464634,
+      "specificity": 0.9311594202898551,
+      "false_positive_rate": 0.06884057971014493,
+      "confusion_matrix": [
+        [
+          1799,
+          133
+        ],
+        [
+          8,
+          60
+        ]
+      ],
+      "params": {}
+    },
+    {
+      "model": "Random Forest",
+      "cv_f1": 0.6793185629242536,
+      "cv_recall": 0.6458585858585859,
+      "cv_precision": 0.7179030732860521,
+      "cv_roc_auc": 0.9686079997655501,
+      "accuracy": 0.981,
+      "precision": 0.75,
+      "recall": 0.6617647058823529,
+      "f1": 0.703125,
+      "roc_auc": 0.9552543843624407,
+      "pr_auc": 0.7531426717943444,
+      "specificity": 0.9922360248447205,
+      "false_positive_rate": 0.007763975155279503,
+      "confusion_matrix": [
+        [
+          1917,
+          15
+        ],
+        [
+          23,
+          45
+        ]
+      ],
+      "params": {}
+    },
+    {
+      "model": "Random Forest (tuned)",
+      "cv_f1": 0.6793185629242536,
+      "cv_recall": 0.6458585858585859,
+      "cv_precision": 0.7179030732860521,
+      "cv_roc_auc": 0.9686079997655501,
+      "accuracy": 0.981,
+      "precision": 0.75,
+      "recall": 0.6617647058823529,
+      "f1": 0.703125,
+      "roc_auc": 0.9552543843624407,
+      "pr_auc": 0.7531426717943444,
+      "specificity": 0.9922360248447205,
+      "false_positive_rate": 0.007763975155279503,
+      "confusion_matrix": [
+        [
+          1917,
+          15
+        ],
+        [
+          23,
+          45
+        ]
+      ],
+      "params": {
+        "classifier__class_weight": "balanced",
+        "classifier__max_depth": null,
+        "classifier__min_samples_leaf": 1,
+        "classifier__n_estimators": 200
+      }
+    },
+    {
+      "model": "Gradient Boosting",
+      "cv_f1": 0.4968237337444868,
+      "cv_recall": 0.8597306397306397,
+      "cv_precision": 0.3495517022390498,
+      "cv_roc_auc": 0.9697394880999548,
+      "accuracy": 0.934,
+      "precision": 0.3241758241758242,
+      "recall": 0.8676470588235294,
+      "f1": 0.472,
+      "roc_auc": 0.9661467848008769,
+      "pr_auc": 0.6698900358183375,
+      "specificity": 0.9363354037267081,
+      "false_positive_rate": 0.06366459627329192,
+      "confusion_matrix": [
+        [
+          1809,
+          123
+        ],
+        [
+          9,
+          59
+        ]
+      ],
+      "params": {}
+    },
+    {
+      "model": "Gradient Boosting (tuned)",
+      "cv_f1": 0.5750937830285656,
+      "cv_recall": 0.8265993265993267,
+      "cv_precision": 0.4416162649074894,
+      "cv_roc_auc": 0.9692479129666485,
+      "accuracy": 0.9495,
+      "precision": 0.39072847682119205,
+      "recall": 0.8676470588235294,
+      "f1": 0.5388127853881278,
+      "roc_auc": 0.9660135793447814,
+      "pr_auc": 0.6912966408938975,
+      "specificity": 0.9523809523809523,
+      "false_positive_rate": 0.047619047619047616,
+      "confusion_matrix": [
+        [
+          1840,
+          92
+        ],
+        [
+          9,
+          59
+        ]
+      ],
+      "params": {
+        "classifier__learning_rate": 0.1,
+        "classifier__max_depth": 3,
+        "classifier__min_samples_split": 10,
+        "classifier__n_estimators": 200
+      }
+    }
+  ],
+  "selected": {
+    "model": "Random Forest",
+    "params": {},
+    "reason": "Random Forest was selected because it had the highest mean 5-fold cross-validated F1-score on the training data (CV F1 = 0.679; runner-up: Random Forest (tuned) at 0.679). Selection used training-set cross-validation only, so the test set stayed unseen. On the test set it reached recall = 0.662, precision = 0.750, F1 = 0.703, ROC-AUC = 0.955, with 23 missed failures (false negatives) and 15 false alarms (false positives). In predictive maintenance a false negative (a missed failure risk) is usually costlier than a false positive (an unnecessary inspection), so recall and F1 were prioritised over accuracy.",
+    "accuracy": 0.981,
+    "precision": 0.75,
+    "recall": 0.6617647058823529,
+    "f1": 0.703125,
+    "roc_auc": 0.9552543843624407,
+    "pr_auc": 0.7531426717943444,
+    "specificity": 0.9922360248447205,
+    "false_positive_rate": 0.007763975155279503,
+    "confusion_matrix": [
+      [
+        1917,
+        15
+      ],
+      [
+        23,
+        45
+      ]
+    ],
+    "cv_f1": 0.6793185629242536
+  }
+}

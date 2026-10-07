@@ -1,0 +1,9 @@
+feature,importance,label,method
+torque_nm,0.3035492850293259,Torque [Nm],Impurity-based feature_importances_
+rot_speed_rpm,0.2999175836306275,Rotational speed [rpm],Impurity-based feature_importances_
+tool_wear_min,0.20958561016292068,Tool wear [min],Impurity-based feature_importances_
+air_temp_k,0.0975078422647277,Air temperature [K],Impurity-based feature_importances_
+process_temp_k,0.07173606114329857,Process temperature [K],Impurity-based feature_importances_
+type_L,0.008161525435177536,Machine Type = L,Impurity-based feature_importances_
+type_M,0.006321172560375098,Machine Type = M,Impurity-based feature_importances_
+type_H,0.0032209197735471383,Machine Type = H,Impurity-based feature_importances_

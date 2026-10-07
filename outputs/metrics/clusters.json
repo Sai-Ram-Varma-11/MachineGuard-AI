@@ -1,0 +1,13 @@
+{
+  "chosen_k": 3,
+  "selection_rule": "highest silhouette score in K=2..6",
+  "pca_explained_variance_ratio": [
+    0.3821480997088077,
+    0.368170481728089
+  ],
+  "descriptions": [
+    "Cluster 1: higher air temperature, higher process temperature. Observed higher failure proportion in this dataset (5.2% vs 3.4% overall). This describes association only, not cause.",
+    "Cluster 2: lower air temperature, lower process temperature. Observed lower failure proportion in this dataset (2.2% vs 3.4% overall). This describes association only, not cause.",
+    "Cluster 3: higher rotational speed, lower torque. Observed lower failure proportion in this dataset (2.2% vs 3.4% overall). This describes association only, not cause."
+  ]
+}

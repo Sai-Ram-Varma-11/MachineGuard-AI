@@ -1,0 +1,132 @@
+{
+  "shape_raw": [
+    10000,
+    14
+  ],
+  "shape_clean": [
+    10000,
+    7
+  ],
+  "dtypes": {
+    "UID": "int64",
+    "Product ID": "str",
+    "Type": "str",
+    "Air temperature [K]": "float64",
+    "Process temperature [K]": "float64",
+    "Rotational speed [rpm]": "int64",
+    "Torque [Nm]": "float64",
+    "Tool wear [min]": "int64",
+    "Machine failure": "int64",
+    "TWF": "int64",
+    "HDF": "int64",
+    "PWF": "int64",
+    "OSF": "int64",
+    "RNF": "int64"
+  },
+  "missing_values_total": 0,
+  "duplicate_rows": 0,
+  "class_distribution": {
+    "non_failure": 9661,
+    "failure": 339,
+    "failure_percent": 3.39
+  },
+  "type_distribution": {
+    "L": 6000,
+    "M": 2997,
+    "H": 1003
+  },
+  "failure_rate_by_type": {
+    "H": {
+      "records": 1003,
+      "failures": 21,
+      "rate": 0.020937188434695914
+    },
+    "L": {
+      "records": 6000,
+      "failures": 235,
+      "rate": 0.03916666666666667
+    },
+    "M": {
+      "records": 2997,
+      "failures": 83,
+      "rate": 0.02769436102769436
+    }
+  },
+  "numeric_describe": {
+    "air_temp_k": {
+      "count": 10000.0,
+      "mean": 300.005,
+      "std": 2.0,
+      "min": 295.3,
+      "25%": 298.3,
+      "50%": 300.1,
+      "75%": 301.5,
+      "max": 304.5
+    },
+    "process_temp_k": {
+      "count": 10000.0,
+      "mean": 310.006,
+      "std": 1.484,
+      "min": 305.7,
+      "25%": 308.8,
+      "50%": 310.1,
+      "75%": 311.1,
+      "max": 313.8
+    },
+    "rot_speed_rpm": {
+      "count": 10000.0,
+      "mean": 1538.776,
+      "std": 179.284,
+      "min": 1168.0,
+      "25%": 1423.0,
+      "50%": 1503.0,
+      "75%": 1612.0,
+      "max": 2886.0
+    },
+    "torque_nm": {
+      "count": 10000.0,
+      "mean": 39.987,
+      "std": 9.969,
+      "min": 3.8,
+      "25%": 33.2,
+      "50%": 40.1,
+      "75%": 46.8,
+      "max": 76.6
+    },
+    "tool_wear_min": {
+      "count": 10000.0,
+      "mean": 107.951,
+      "std": 63.654,
+      "min": 0.0,
+      "25%": 53.0,
+      "50%": 108.0,
+      "75%": 162.0,
+      "max": 253.0
+    }
+  },
+  "iqr_outlier_counts": {
+    "air_temp_k": 0,
+    "process_temp_k": 0,
+    "rot_speed_rpm": 418,
+    "torque_nm": 69,
+    "tool_wear_min": 0
+  },
+  "correlation_with_target": {
+    "air_temp_k": 0.0826,
+    "process_temp_k": 0.0359,
+    "rot_speed_rpm": -0.0442,
+    "torque_nm": 0.1913,
+    "tool_wear_min": 0.1054
+  },
+  "leakage_check": {
+    "dropped_failure_mode_columns": [
+      "TWF",
+      "HDF",
+      "PWF",
+      "OSF",
+      "RNF"
+    ],
+    "share_of_rows_where_target_equals_any_mode_flag": 0.9973,
+    "note": "A value near 1.0 shows these columns encode the target, so they are excluded."
+  }
+}
